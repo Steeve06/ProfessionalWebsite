@@ -1,0 +1,152 @@
+.Homepage{
+    position: relative; /*create positioning context*/
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(
+        circle at top right,
+        rgba(238,230,255,1) 0%,
+        rgba(255,255,255,1) 50%,
+        rgba(255,240,245,1) 100%
+    );
+}
+
+.left{
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 1rem;
+    color: #080808;
+}
+
+.hero-subtitle {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #411beadc, #e607c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.left{
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+
+.right{
+    position: absolute;
+    top: 10rem; /*adjust the position of the card on the y axis*/
+    right: 1rem; /*adjust the position of the card on the x axis*/
+    width: 500px; /*adjust the width of the card*/
+    height: 300px; /*adjust the height of the card*/
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*image fills the card*/
+.home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-button {
+    display: inline-flex;
+    padding: 20px 40px;
+    background-color: #070ee6;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    border: none;
+    border-radius: 13px; /*rounded corners*/
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease; /*smooth transition for hover effect*/
+    text-decoration: none; /*remove underline from link*/
+}
+
+.cta-button:hover {
+    background-color: #0509b3; /*darker shade on hover*/
+}
+
+.arrow {
+    margin-left: 8px; /*space between text and arrow*/
+    font-size: 18px; /*size of the arrow*/
+    font-weight: bold;
+}
+
+
+.our-services-button {
+    display: inline-flex;
+    padding: 20px 40px;
+    background-color: #f1f2f5;
+    color: rgb(50, 8, 242);
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 1rem;
+    border: blue solid 2px;
+    border-radius: 13px;/*rounded corners*/
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;    /*smooth transition for hover effect*/
+    text-decoration: none;    /*remove underline from link*/
+}
+
+.our-services-button:hover {
+    background-color: #a2a3bd;
+    /*darker shade on hover*/
+}
+
+.stats-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+    align-items: center;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.stat-item {
+    text-align: left;
+    /* Aligns text under the number */
+}
+
+.stat-number {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* Colors matching your image */
+.blue {
+    color: #2e5bff;
+}
+
+.purple {
+    color: #8a2be2;
+}
+
+.pink {
+    color: #d63384;
+}
