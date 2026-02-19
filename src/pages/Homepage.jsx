@@ -6,8 +6,10 @@ const Homepage = () => {
     return(
         <><div className="Homepage">
 
+          
+
             <div className="left">
-                <div className="badge">Your Technology Partner</div>
+                <button className="caption">Your Technology Partner</button>
                 <header>
                     <h1 className="hero-title">Transform Your</h1>
                     <span className="hero-subtitle">Digital Future</span>
@@ -42,6 +44,7 @@ const Homepage = () => {
 
 
             </div>
+          
 
             <div className="right">
                 <img className="home-image" src={img} alt="Homepage decoration" />
@@ -56,14 +59,41 @@ const Homepage = () => {
                 <p className="section2-paragraph">From strategy to implementation, we provide end-to-end technology services that help business thrive in the digital age.</p>
             </header>
 
-            <div className="services-container">
-
-                <div className="service-item">
-                    <h2 className="service-title">Custom Software Development</h2>
-                    <p className="service-description">Tailored software solutions designed to meet your unique business needs and drive growth.</p>
+            <div className="card-container">
+                <div className="card">
+                    <h2 className="card-title">Custom Software Development</h2>
+                    <p className="card-description">Tailored software solutions designed to meet your unique business needs and drive growth.</p>
                 </div>
-                
-            </div>  
+
+                <div className="card">
+                    <h2 className="card-title">Cloud Infrastructure</h2>
+                    <p className="card-description">Scalable and secure cloud solutions that enhance performance and reduce operational costs.</p>
+                </div>
+
+                <div className="card">
+                    <h2 className="card-title">Cybersecurity Solutions</h2>
+                    <p className="card-description">Comprehensive security services to protect your digital assets and ensure compliance with industry standards.</p>
+                </div>
+
+                <div className="card">
+                    <h2 className="card-title">Custom Software Development</h2>
+                    <p className="card-description">Tailored software solutions designed to meet your unique business needs and drive growth.</p>
+                </div>
+
+                <div className="card">
+                    <h2 className="card-title">Cloud Infrastructure</h2>
+                    <p className="card-description">Scalable and secure cloud solutions that enhance performance and reduce operational costs.</p>
+                </div>
+
+                <div className="card">
+                    <h2 className="card-title">Cybersecurity Solutions</h2>
+                    <p className="card-description">Comprehensive security services to protect your digital assets and ensure compliance with industry standards.</p>
+                </div>
+
+            </div>
+            
+
+             
 
 
 
