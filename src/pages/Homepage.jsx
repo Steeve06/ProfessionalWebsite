@@ -138,6 +138,8 @@ const Homepage = () => {
                             
                         </div>
                     </div>
+
+            </div>
             </div>
 
             <div className="section4">
@@ -182,20 +184,44 @@ const Homepage = () => {
                         </p>
 
                         <button className="more-projects-button">View More Projects</button>
-
-
-
-
-
             </div>
+
+            <div className="section5">
+    <button className="caption3">Get in Touch</button>
+    <header>
+        <h1 className="hero-title3">Let's Build Something Amazing Together</h1>
+    </header>
+
+    <p className="paragraph4">
+        Whether you're ready to start a project or just want to learn more...
+    </p>
+
+    {/* New wrapper starts here */}
+    <div className="contact-container"> 
+        <form className="contact-form">
+            <input type="text" placeholder="Your Name" className="form-input" />
+            <input type="email" placeholder="Your Email" className="form-input" />
+            <textarea placeholder="Your Message" className="form-textarea"></textarea>
+            <button type="submit" className="submit-button">Send Message</button>
+        </form>
+
+        <div className="contact-info">
+            <div className="contact-item">
+                <h2 className="contact-title">Contact Information</h2>
+                <p className="contact-detail"><strong>Email:</strong> moctosteeve@gmail.com</p>
+                <p className="contact-detail"><strong>Phone:</strong> +1 (123) 456-7890</p>
+                
+                <h4 className="business_hours">Business Hours</h4>
+                <p className="business-hours">Mon-Fri: 9am-5pm</p>
+                <p className="saturday-hours">Saturday: 10am-2pm</p>
+                <p className="sunday-hours">Sunday: Closed</p>
+            </div>
+        </div>
+    </div>
+    {/* New wrapper ends here */}
+</div>
             
-
-             
-
-
-
-        </div></>
-
+            </>
     );
 }
 export default Homepage;
