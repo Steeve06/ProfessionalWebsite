@@ -106,7 +106,7 @@ const Homepage = () => {
 
                     <div className="card-container">
                         {PROJECTS.map((project) =>(
-                            <Card key = {project.id} variant= "project" title = {project.title} description={project.description} imageUrl = {project.imageUrl}
+                            <Card key = {project.id} variant= "project" tag= {project.tag} title = {project.title} description={project.description} imageUrl = {project.imageUrl}
                             />                
                         ))}
                     </div>
