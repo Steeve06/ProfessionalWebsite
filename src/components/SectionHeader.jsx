@@ -1,5 +1,6 @@
 
 import React from 'react';
+import '../styles/SectionHeader.css';
 
 const SectionHeader = ({ caption, title, subtitle, description, align = "left" }) => {
     return (
@@ -8,13 +9,13 @@ const SectionHeader = ({ caption, title, subtitle, description, align = "left" }
             {caption && <button className="caption">{caption}</button>}
             
             <header>
-                <h1 className="hero-title">
+                <h1 className="section-header-title">
                     {title} 
-                    {subtitle && <span className="hero-subtitle"> {subtitle}</span>}
+                    {subtitle && <span className="section-header-subtitle"> {subtitle}</span>}
                 </h1>
             </header>
 
-            {description && <p className="paragraph">{description}</p>}
+            {description && <p className="section-header-description">{description}</p>}
         </div>
     );
 };

@@ -14,46 +14,47 @@ const Homepage = () => {
         {/* first section of homepage consisting of left and right columns */}
         <div className="Homepage">
 
-            {/* left column with text and stats */}
-            <div className="left">
-                <button className="caption">Your Technology Partner</button>
-                <header>
-                    <h1 className="hero-title">Transform Your</h1>
-                    <span className="hero-subtitle">Digital Future</span>
-                </header>
+            <SplitSection className="section1">
 
-                <p className="paragraph">
-                    MoctoTech helps businesses streamline operations, enhance productivity, and drive growth through innovative technology solutions.
-                </p>
+                <div className="left-content1">
 
-                <div className="features">
-                    <button className="cta-button">Get Started <span className="arrow">→</span></button>
-                    <button className="our-services-button">Our Services</button>
+                    <SectionHeader caption="Your Technology Partner" title="Transform Your" subtitle="Digital Future" />
+                    <p className="section3-paragraph">MoctoTech helps businesses streamline operations, enhance productivity, and drive growth through innovative technology solutions.</p>
+
+                    <div className="features">
+                        <button className="cta-button">Get Started <span className="arrow">→</span></button>
+                        <button className="our-services-button">Our Services</button>
+                        
+                    </div>
+
                     <hr className="divider" />
+
+                    <div className="stats-container">
+                        <div className="stat-item">
+                            <h2 className="stat-number blue">50+</h2>
+                            <p className="stat-label">Projects Delivered</p>
+                        </div>
+
+                        <div className="stat-item">
+                            <h2 className="stat-number purple">98%</h2>
+                            <p className="stat-label">Satisfied Clients</p>
+                        </div>
+
+                        <div className="stat-item">
+                            <h2 className="stat-number pink">24/7</h2>
+                            <p className="stat-label">Support Available</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div className="stats-container">
-                    <div className="stat-item">
-                        <h2 className="stat-number blue">50+</h2>
-                        <p className="stat-label">Projects Delivered</p>
-                    </div>
-
-                    <div className="stat-item">
-                        <h2 className="stat-number purple">98%</h2>
-                        <p className="stat-label">Satisfied Clients</p>
-                    </div>
-
-                    <div className="stat-item">
-                        <h2 className="stat-number pink">24/7</h2>
-                        <p className="stat-label">Support Available</p>
-                    </div>
+                <div className="right-content1">
+                    <Card variant="hero-media">
+                        <img src={img} alt="Technology Illustration" className="hero-image" />
+                    </Card>              
                 </div>
-            </div>
 
-            {/* right column with image */}
-            <div className="right">
-                <img className="home-image" src={img} alt="Homepage decoration" />
-            </div>
+            </SplitSection>
 
         </div>
 
@@ -65,7 +66,7 @@ const Homepage = () => {
                 <p className="section2-paragraph">From strategy to implementation, we provide end-to-end technology services that help business thrive in the digital age.</p>
             </header>
 
-            <div className="card-container">
+            <div className="card-container2">
                 {SERVICES_DATA.map((service) =>(
                     <Card key = {service.id} variant= "service" title = {service.title} description={service.description} imageUrl = {service.imageUrl}
                     />                
@@ -78,7 +79,7 @@ const Homepage = () => {
             <div className="left-content">
 
                 <SectionHeader caption="Why Choose MoctoTech" title="Your Trusted Technology" subtitle="Partner" />
-                <p className="section3-Paragraph">We are a forward-thinking IT consulting firm dedicated to helping businesses navigate the complexities of digital transformation. Our mission is to deliver innovative, scalable solutions that drive measurable results.
+                <p className="section3-paragraph">We are a forward-thinking IT consulting firm dedicated to helping businesses navigate the complexities of digital transformation. Our mission is to deliver innovative, scalable solutions that drive measurable results.
                                                     Whether you're a startup looking to establish your tech infrastructure or an enterprise seeking to modernize legacy systems, 
                                                     we have the expertise and passion to make it happen.</p>
             </div>
@@ -95,23 +96,23 @@ const Homepage = () => {
 
         <div className="section4">
 
-            <button className="caption2">Our Work</button>
+            <button className="section4-caption">Our Work</button>
                     <header>
-                        <h1 className="hero-title2">Featured Projects</h1>
+                        <h1 className="section4-title">Featured Projects</h1>
                     </header>
 
-                    <p className="paragraph2">
+                    <p className="section4-paragraph">
                         Discover how we've helped businesses across various industries achieve their technology goals through innovative solutions and expert consulting.
                     </p>
 
-                    <div className="card-container">
+                    <div className="section4-container">
                         {PROJECTS.map((project) =>(
                             <Card key = {project.id} variant= "project" tag= {project.tag} title = {project.title} description={project.description} imageUrl = {project.imageUrl}
                             />                
                         ))}
                     </div>
 
-                    <p className="paragraph3">
+                    <p className="section4-paragraph2">
                         Want to see more of our work?
                     </p>
 
