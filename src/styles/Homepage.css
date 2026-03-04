@@ -72,7 +72,7 @@
 }
 
 .cta-button {
-    padding: 14px 28px;
+    padding: 20px 40px;
     background-color: #070ee6;
     color: white;
     font-weight: 600;
@@ -90,14 +90,14 @@
 
 .arrow {
     margin-left: 8px; /*space between text and arrow*/
-    font-size: 18px; /*size of the arrow*/
+    font-size: 13px; /*size of the arrow*/
     font-weight: bold;
 }
 
 .our-services-button {
-    padding: 14px 28px;
-    background-color: #f4eded;
-    color: #070ee6;
+    padding: 20px 40px;
+    background-color: #ebcae4;
+    color: rgb(50, 8, 242);
     font-weight: 600;
     border: none;
     border-radius: 13px;
@@ -191,13 +191,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
-    gap: 16px;
-    width: 95%;
+    gap: 10px;
+    width: 90%;
     padding: 2rem;
 }
 
 .card--service:hover,
-.card--feature:hover,
+.card--benefit:hover,
 .card--project:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -224,24 +224,9 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Section 2 Style  */
 .card--service {
     border: 1px solid #eee;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Section 3 Style  */
-.card--feature {
-    min-height: 120px;
-    padding: 1.5rem;
-    background-color: #f9fafb;
-    
-}
-
-/* Section 4 Style (Projects) */
-.card--project {
-    border-left: 5px solid #411bea;
-    background: linear-gradient(to bottom right, #ffffff, #f0f4ff);
 }
 
 :root {
@@ -301,7 +286,15 @@
     flex-direction: column;
 }
 
-.caption2 {
+.section4-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 16px;
+    width: 80%;
+}
+
+.section4-caption {
     background-color: #c1eaca;
     border: solid #c1eaca;
     font-size: 16px;
@@ -315,7 +308,7 @@
     padding: 8px 16px;
 }
 
-.hero-title2 {
+.section4-title {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.1;
     margin-top: 1rem;
@@ -323,12 +316,21 @@
     color: #080808;
 }
 
+.section4-paragraph {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    color: #333;
+    margin-top: 1.5rem;
+    line-height: 1.7;
+}
 
-.card-tag {
+.card--project {
+    border: 1px solid #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.card--project .card-tag {
     background-color: #f0f4ff;
-    /* Very light blue */
     color: #411bea;
-    /* Your brand blue */
     font-size: 12px;
     width: fit-content;
     font-weight: 700;
@@ -336,9 +338,7 @@
     letter-spacing: 0.5px;
     padding: 4px ;
     border-radius: 20px;
-    /* Makes it a pill shape */
     margin-bottom: 12px;
-    /* Gap between tag and title */
 }
 
 .more-projects-button {
@@ -349,23 +349,12 @@
     font-size: 16px;
     font-weight: normal;
     border: none;
-    border-radius: 13px; /*rounded corners*/
+    border-radius: 13px; 
     cursor: pointer !important;
     transition: background-color 0.3s ease; /*smooth transition for hover effect*/
     text-decoration: none; /*remove underline from link*/
 }
 
-
-.project1 {
-    display: inline-flex;
-    align-items: center;
-    color: #411beadc;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-/* Layout Wrapper */
 .contact-container {
     display: flex;
     flex-direction: row;
@@ -377,7 +366,7 @@
     text-align: left;
 }
 
-/* Form takes up 60% of the space */
+
 .contact-form {
     flex: 1.5;
     display: flex;
@@ -389,7 +378,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* Info takes up 40% of the space */
 .contact-info {
     flex: 1;
 }

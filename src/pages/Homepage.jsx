@@ -87,7 +87,7 @@ const Homepage = () => {
             <div className="right-content">
                 <div className="benefit-grid">
                     {BENEFITS.map((benefit, index)=>(
-                        <Card key={index} variant="feature-small" title={benefit.title} description={benefit.description} />
+                        <Card key={index} variant="benefit" title={benefit.title} description={benefit.description} />
                     ))}
                 </div>
             </div>
@@ -112,7 +112,7 @@ const Homepage = () => {
                         ))}
                     </div>
 
-                    <p className="section4-paragraph2">
+                    <p className="section4-paragraph">
                         Want to see more of our work?
                     </p>
 
