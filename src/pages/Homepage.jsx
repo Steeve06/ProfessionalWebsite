@@ -6,6 +6,7 @@ import {SplitSection} from "../components/SplitSection";
 import { PROJECTS } from "../services/projects";
 import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 import '../styles/Homepage.css';
 
 const Homepage = () => {
@@ -119,40 +120,70 @@ const Homepage = () => {
                     <button className="more-projects-button">View More Projects</button>
         </div>
 
-        <div className="section5">
-            <button className="caption3">Get in Touch</button>
-            <header>
-                <h1 className="hero-title3">Let's Build Something Amazing Together</h1>
-            </header>
+        <section className="section-contact">
+            <SectionHeader 
+                align="center"
+                caption="Get In Touch"
+                title="Let's Build Something Amazing"
+                description="Ready to transform your business? Reach out to discuss your project and discover how we can help you achieve your technology goals."
+            />
 
-            <p className="paragraph4">
-                Whether you're ready to start a project or just want to learn more...
-            </p>
-
-            {/* New wrapper starts here */}
-            <div className="contact-container"> 
-                <form className="contact-form">
-                    <input type="text" placeholder="Your Name" className="form-input" />
-                    <input type="email" placeholder="Your Email" className="form-input" />
-                    <textarea placeholder="Your Message" className="form-textarea"></textarea>
-                    <button type="submit" className="submit-button">Send Message</button>
+            <SplitSection className="contact-container">
+                {/* Left: Glassmorphism Form */}
+                <div className="contact-form-glass">
+                <form>
+                    <div className="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe" />
+                    </div>
+                    <div className="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" />
+                    </div>
+                    <div className="form-group">
+                    <label>Company</label>
+                    <input type="text" placeholder="Your Company" />
+                    </div>
+                    <div className="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell us about your project..."></textarea>
+                    </div>
                 </form>
+                </div>
 
-                <div className="contact-info">
-                    <div className="contact-item">
-                        <h2 className="contact-title">Contact Information</h2>
-                        <p className="contact-detail"><strong>Email:</strong> moctosteeve@gmail.com</p>
-                        <p className="contact-detail"><strong>Phone:</strong> +1 (123) 456-7890</p>
-                        
-                        <h4 className="business_hours">Business Hours</h4>
-                        <p className="business-hours">Mon-Fri: 9am-5pm</p>
-                        <p className="saturday-hours">Saturday: 10am-2pm</p>
-                        <p className="sunday-hours">Sunday: Closed</p>
+                {/* Right: Icon List & Hours */}
+                <div className="contact-info-glass">
+                <h2 className="info-title">Contact Information</h2>
+                <p className="info-subtext">We're here to answer your questions and discuss how we can help your business succeed.</p>
+                
+                <div className="contact-methods">
+                    <div className="method-item">
+                    <div className="icon-box"><FaEnvelope /></div>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>contact@techconsult.com</p>
+                    </div>
+                    </div>
+                    <div className="method-item">
+                    <div className="icon-box"><FaPhone /></div>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 (234) 567-890</p>
+                    </div>
                     </div>
                 </div>
-            </div>
-            {/* New wrapper ends here */}
-        </div>
+
+                <div className="business-hours-card">
+                    <h4>Business Hours</h4>
+                    <div className="hours-row">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+                </div>
+            </SplitSection>
+        </section>
+
             
             </>
     );
