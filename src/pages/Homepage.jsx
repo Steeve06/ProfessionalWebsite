@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from 'lucide-react'
+import { FaEnvelope, FaPhone,FaLinkedin } from 'react-icons/fa';
 import img from "../assets/img.png";
 import '../styles/Homepage.css';
 
@@ -187,39 +188,103 @@ const Homepage = () => {
             </div>
 
             <div className="section5">
-    <button className="caption3">Get in Touch</button>
-    <header>
-        <h1 className="hero-title3">Let's Build Something Amazing Together</h1>
-    </header>
+                <button className="caption3">Get in Touch</button>
+                <header>
+                    <h1 className="section5-title">Let's Build Something Amazing Together</h1>
+                </header>
 
-    <p className="paragraph4">
-        Whether you're ready to start a project or just want to learn more...
-    </p>
+                <p className="section5-paragraph">
+                    Whether you're ready to start a project or just want to learn more...
+                </p>
 
-    {/* New wrapper starts here */}
-    <div className="contact-container"> 
-        <form className="contact-form">
-            <input type="text" placeholder="Your Name" className="form-input" />
-            <input type="email" placeholder="Your Email" className="form-input" />
-            <textarea placeholder="Your Message" className="form-textarea"></textarea>
-            <button type="submit" className="submit-button">Send Message</button>
-        </form>
+                {/* New wrapper starts here */}
+                <div className="contact-container"> 
+                    <form className="contact-form">
 
-        <div className="contact-info">
-            <div className="contact-item">
-                <h2 className="contact-title">Contact Information</h2>
-                <p className="contact-detail"><strong>Email:</strong> moctosteeve@gmail.com</p>
-                <p className="contact-detail"><strong>Phone:</strong> +1 (123) 456-7890</p>
-                
-                <h4 className="business_hours">Business Hours</h4>
-                <p className="business-hours">Mon-Fri: 9am-5pm</p>
-                <p className="saturday-hours">Saturday: 10am-2pm</p>
-                <p className="sunday-hours">Sunday: Closed</p>
+                        <div className="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Company</label>
+                            <input type="text" placeholder="Your Company" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                    </form>
+
+
+                    <div className="contact-info-container">
+                        <div className="contact-item">
+
+                            <div className="contacts">
+                                <h2 className="contact-title">Contact Information</h2>
+                                
+                                <div className="contact-method-row">
+                                    <div className="icon-box">
+                                        <FaEnvelope />
+                                    </div>
+                                    <div className="contact-text">
+                                        <strong>Email Us</strong>
+                                        <p>moctosteeve@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <div className="contact-method-row">
+                                    <div className="icon-box">
+                                        <FaPhone />
+                                    </div>
+                                    <div className="contact-text">
+                                        <strong>Call Us</strong>
+                                        <p>+1 (470) 452-5485</p>
+                                    </div>
+                                </div>
+
+                                <div className="contact-method-row">
+                                    <div className="icon-box"><FaLinkedin /></div>
+                                    <div className="contact-text">
+                                        <strong>Visit Us</strong>
+                                        <a className="linkedin" href="https://www.linkedin.com/in/steeve-mocto-024429268/" target="_blank" rel="noopener noreferrer">Steeve Mocto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="business-hours-container">
+                                <h4 className="business_title">Business Hours</h4>
+                                
+                                <div className="hours-row">
+                                    <span>Monday - Friday</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                
+                                <div className="hours-row">
+                                    <span>Saturday</span>
+                                    <span>10:00 AM - 2:00 PM</span>
+                                </div>
+                                
+                                <div className="hours-row">
+                                    <span>Sunday</span>
+                                    <span>Closed</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+                {/* New wrapper ends here */}
             </div>
-        </div>
-    </div>
-    {/* New wrapper ends here */}
-</div>
             
             </>
     );

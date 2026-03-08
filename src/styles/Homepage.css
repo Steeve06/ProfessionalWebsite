@@ -441,6 +441,7 @@
     cursor: pointer !important;
     transition: background-color 0.3s ease; /*smooth transition for hover effect*/
     text-decoration: none; /*remove underline from link*/
+    margin-bottom: 100px;
 }
 
 .paragraph2 {
@@ -451,7 +452,6 @@
     max-width: 65ch;
     text-align: justify;
     text-align-last: center;
-
     
 }   
 
@@ -469,45 +469,172 @@
     transition: color 0.3s ease;
 }
 
+.section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 4rem 8%;
+    overflow-x: hidden;
+    background: linear-gradient(130deg, #1f02a0dc, #6a1676);
+}
+
+.caption3 {
+    background-color: #6a1676;
+    border: solid #6a1676;
+    font-size: 16px;
+    font-weight: 545;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: -1rem;
+    width: fit-content;
+    color: rgb(240, 235, 240);
+    padding: 8px 16px;
+}
+
+.section5-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.section5-paragraph {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    color: #fafafa;
+    max-width: 600px;
+    text-align: center;
+}
+
 /* Layout Wrapper */
 .contact-container {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 40px;
     width: 100%;
-    max-width: 1100px;
-    margin-top: 40px;
-    align-items: flex-start;
-    text-align: left;
+    max-width: 1200px;
+    align-items: stretch;
 }
 
-/* Form takes up 60% of the space */
 .contact-form {
     flex: 1.5;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: white;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Info takes up 40% of the space */
-.contact-info {
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid rgba(172, 170, 170, 0.2);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fafafa;
+}
+
+.contact-info-container {
     flex: 1;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contact-method-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-title {
-    font-size: 1.8rem;
-    color: #111827;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
 }
 
-.contact-detail {
+.icon-box {
+    /* bg-white/10 style */
+    background: rgba(255, 255, 255, 0.1);
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-text strong {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+}
+
+.contact-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.linkedin {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.business-hours-container {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.business_title {
+    margin-bottom: 1rem;
     font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #4b5563;
+    color: #ffffff;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hours-row:last-child {
+    border-bottom: none;
 }
 
 /* Mobile Responsive: Stacks them back on top of each other */
