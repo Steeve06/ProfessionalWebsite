@@ -1,8 +1,9 @@
 import React from "react";
 import { ArrowRight } from 'lucide-react'
-import { FaEnvelope, FaPhone,FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone,FaLinkedin, FaUsers, FaRocket, FaHandshake, FaCheckCircle, FaCloud, FaShieldAlt, FaLightbulb, FaChartBar, FaSyncAlt, FaCode, FaLaptopCode } from 'react-icons/fa';
 import img from "../assets/img.png";
 import '../styles/Homepage.css';
+
 
 const Homepage = () => {
     return(
@@ -63,31 +64,37 @@ const Homepage = () => {
 
             <div className="card-container">
                 <div className="card">
+                    <FaLaptopCode className="card-icon scale-up" />
                     <h2 className="card-title">Custom Software Development</h2>
                     <p className="card-description">Tailored software solutions designed to meet your unique business needs and drive growth.</p>
                 </div>
 
                 <div className="card">
+                    <FaCloud className="card-icon" />
                     <h2 className="card-title">Cloud Infrastructure</h2>
                     <p className="card-description">Scalable and secure cloud solutions that enhance performance and reduce operational costs.</p>
                 </div>
 
                 <div className="card">
+                    <FaShieldAlt className="card-icon" />
                     <h2 className="card-title">Cybersecurity Solutions</h2>
                     <p className="card-description">Comprehensive security services to protect your digital assets and ensure compliance with industry standards.</p>
                 </div>
 
                 <div className="card">
+                    <FaLightbulb className="card-icon scale-up" />
                     <h2 className="card-title">Custom Software Development</h2>
                     <p className="card-description">Tailored software solutions designed to meet your unique business needs and drive growth.</p>
                 </div>
 
                 <div className="card">
+                    <FaChartBar className="card-icon" />
                     <h2 className="card-title">Cloud Infrastructure</h2>
                     <p className="card-description">Scalable and secure cloud solutions that enhance performance and reduce operational costs.</p>
                 </div>
 
                 <div className="card">
+                    <FaSyncAlt className="card-icon" />
                     <h2 className="card-title">Cybersecurity Solutions</h2>
                     <p className="card-description">Comprehensive security services to protect your digital assets and ensure compliance with industry standards.</p>
                 </div>
@@ -117,21 +124,25 @@ const Homepage = () => {
                         <div className="card-container1">
 
                             <div className="card1">
+                                <FaUsers className="card-icon" />
                                 <h2 className="card-title1">Expert Team</h2>
                                 <p className="card-description1">Industry experts with deep experience in delivering innovative solutions.</p>
                             </div>
 
                             <div className="card1">
+                                <FaRocket className="card-icon" />
                                 <h2 className="card-title1">Fast Delivery</h2>
                                 <p className="card-description1">Agile methodologies ensure rapid project completion without compromising quality.</p>
                             </div>
 
                             <div className="card1">
+                                <FaCheckCircle className="card-icon" />
                                 <h2 className="card-title1">Quality First</h2>
                                 <p className="card-description1">Commitment to excellence in every solution we deliver to clients.</p>
                             </div>
 
                             <div className="card1">
+                                <FaHandshake className="card-icon" />
                                 <h2 className="card-title1">Proven Results</h2>
                                 <p className="card-description1">Track record of delivering successful projects and satisfied clients.</p>
                             </div>
