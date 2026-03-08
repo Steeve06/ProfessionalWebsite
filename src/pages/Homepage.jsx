@@ -1,4 +1,6 @@
 import React from "react";
+import { ArrowRight } from 'lucide-react'
+import { FaEnvelope, FaPhone,FaLinkedin, FaUsers, FaRocket, FaHandshake, FaCheckCircle, FaCloud, FaShieldAlt, FaLightbulb, FaChartBar, FaSyncAlt, FaCode, FaLaptopCode } from 'react-icons/fa';
 import img from "../assets/img.png";
 import {SERVICES_DATA} from "../services/services";
 import { BENEFITS } from "../services/benefits";    
@@ -8,6 +10,7 @@ import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import '../styles/Homepage.css';
+
 
 const Homepage = () => {
     return(
@@ -151,39 +154,104 @@ const Homepage = () => {
                 </form>
                 </div>
 
-                {/* Right: Icon List & Hours */}
-                <div className="contact-info-glass">
-                <h2 className="info-title">Contact Information</h2>
-                <p className="info-subtext">We're here to answer your questions and discuss how we can help your business succeed.</p>
-                
-                <div className="contact-methods">
-                    <div className="method-item">
-                    <div className="icon-box"><FaEnvelope /></div>
-                    <div>
-                        <h4>Email Us</h4>
-                        <p>contact@techconsult.com</p>
+            <div className="section5">
+                <button className="caption3">Get in Touch</button>
+                <header>
+                    <h1 className="section5-title">Let's Build Something Amazing Together</h1>
+                </header>
+
+                <p className="section5-paragraph">
+                    Whether you're ready to start a project or just want to learn more...
+                </p>
+
+                {/* New wrapper starts here */}
+                <div className="contact-container"> 
+                    <form className="contact-form">
+
+                        <div className="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Company</label>
+                            <input type="text" placeholder="Your Company" />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                    </form>
+
+
+                    <div className="contact-info-container">
+                        <div className="contact-item">
+
+                            <div className="contacts">
+                                <h2 className="contact-title">Contact Information</h2>
+                                
+                                <div className="contact-method-row">
+                                    <div className="icon-box">
+                                        <FaEnvelope />
+                                    </div>
+                                    <div className="contact-text">
+                                        <strong>Email Us</strong>
+                                        <p>moctosteeve@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <div className="contact-method-row">
+                                    <div className="icon-box">
+                                        <FaPhone />
+                                    </div>
+                                    <div className="contact-text">
+                                        <strong>Call Us</strong>
+                                        <p>+1 (470) 452-5485</p>
+                                    </div>
+                                </div>
+
+                                <div className="contact-method-row">
+                                    <div className="icon-box"><FaLinkedin /></div>
+                                    <div className="contact-text">
+                                        <strong>Visit Us</strong>
+                                        <a className="linkedin" href="https://www.linkedin.com/in/steeve-mocto-024429268/" target="_blank" rel="noopener noreferrer">Steeve Mocto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="business-hours-container">
+                                <h4 className="business_title">Business Hours</h4>
+                                
+                                <div className="hours-row">
+                                    <span>Monday - Friday</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </div>
+                                
+                                <div className="hours-row">
+                                    <span>Saturday</span>
+                                    <span>10:00 AM - 2:00 PM</span>
+                                </div>
+                                
+                                <div className="hours-row">
+                                    <span>Sunday</span>
+                                    <span>Closed</span>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
-                    </div>
-                    <div className="method-item">
-                    <div className="icon-box"><FaPhone /></div>
-                    <div>
-                        <h4>Call Us</h4>
-                        <p>+1 (234) 567-890</p>
-                    </div>
-                    </div>
+                    
                 </div>
 
-                <div className="business-hours-card">
-                    <h4>Business Hours</h4>
-                    <div className="hours-row">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                    </div>
-                </div>
-                </div>
-            </SplitSection>
-        </section>
-
+                {/* New wrapper ends here */}
+            </div>
             
             </>
     );
