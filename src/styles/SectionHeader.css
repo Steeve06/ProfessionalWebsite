@@ -1,0 +1,39 @@
+
+
+.section-header .caption {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    border: none;
+    cursor: default;
+}
+
+.section-header-title {
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #080808;
+}
+
+.section-header-subtitle {
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
+    font-weight: bold;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #411beadc, #e607c5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-header-description {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    color: #333;
+    margin-bottom: 1.5rem 0;
+    max-width: 500px;
+}
