@@ -8,7 +8,7 @@ import {SplitSection} from "../components/SplitSection";
 import { PROJECTS } from "../services/projects";
 import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 import '../styles/Homepage.css';
 
 
@@ -62,97 +62,72 @@ const Homepage = () => {
 
         </div>
 
-        {/* second section of homepage. showcases services offered using cards */}
-        <div className="section2">
-            <header className="section2-header">
-                <button className="section2-title">Our Services</button>
-                <h1 className="section2-subtitle">Comprehensive IT Solutions</h1>
-                <p className="section2-paragraph">From strategy to implementation, we provide end-to-end technology services that help business thrive in the digital age.</p>
-            </header>
+            {/* second section of homepage. showcases services offered using cards */}
+            <div className="section2">
+                <header className="section2-header">
+                    <button className="section2-title">Our Services</button>
+                    <h1 className="section2-subtitle">Comprehensive IT Solutions</h1>
+                    <p className="section2-paragraph">From strategy to implementation, we provide end-to-end technology services that help business thrive in the digital age.</p>
+                </header>
 
-            <div className="card-container2">
-                {SERVICES_DATA.map((service) =>(
-                    <Card key = {service.id} variant= "service" title = {service.title} description={service.description} imageUrl = {service.imageUrl}
-                    />                
-                ))}
-            </div>
-        </div>
-
-        <SplitSection className="section3">
-
-            <div className="left-content">
-
-                <SectionHeader caption="Why Choose MoctoTech" title="Your Trusted Technology" subtitle="Partner" />
-                <p className="section3-paragraph">We are a forward-thinking IT consulting firm dedicated to helping businesses navigate the complexities of digital transformation. Our mission is to deliver innovative, scalable solutions that drive measurable results.
-                                                    Whether you're a startup looking to establish your tech infrastructure or an enterprise seeking to modernize legacy systems, 
-                                                    we have the expertise and passion to make it happen.</p>
-            </div>
-
-            <div className="right-content">
-                <div className="benefit-grid">
-                    {BENEFITS.map((benefit, index)=>(
-                        <Card key={index} variant="benefit" title={benefit.title} description={benefit.description} />
+                <div className="card-container2">
+                    {SERVICES_DATA.map((service) =>(
+                        <Card key = {service.id} variant= "service" title = {service.title} description={service.description} imageUrl = {service.imageUrl} icon={service.icon}
+                        />                
                     ))}
                 </div>
             </div>
 
-        </SplitSection>
+            <SplitSection className="section3">
 
-        <div className="section4">
+                <div className="left-content">
+                    <button className="section3-caption">Why Choose MoctoTech</button>
+                    <SectionHeader title="Your Trusted Technology" subtitle="Partner" />
+                    <p className="section3-paragraph">We are a forward-thinking IT consulting firm dedicated to helping businesses navigate the complexities of digital transformation. Our mission is to deliver innovative, scalable solutions that drive measurable results.
+                                                        Whether you're a startup looking to establish your tech infrastructure or an enterprise seeking to modernize legacy systems, 
+                                                        we have the expertise and passion to make it happen.</p>
+                </div>
 
-            <button className="section4-caption">Our Work</button>
-                    <header>
-                        <h1 className="section4-title">Featured Projects</h1>
-                    </header>
-
-                    <p className="section4-paragraph">
-                        Discover how we've helped businesses across various industries achieve their technology goals through innovative solutions and expert consulting.
-                    </p>
-
-                    <div className="section4-container">
-                        {PROJECTS.map((project) =>(
-                            <Card key = {project.id} variant= "project" tag= {project.tag} title = {project.title} description={project.description} imageUrl = {project.imageUrl}
-                            />                
+                <div className="right-content">
+                    <div className="benefit-grid">
+                        {BENEFITS.map((benefit, index)=>(
+                            <Card key={index} variant="benefit" title={benefit.title} description={benefit.description} />
                         ))}
                     </div>
-
-                    <p className="section4-paragraph">
-                        Want to see more of our work?
-                    </p>
-
-                    <button className="more-projects-button">View More Projects</button>
-        </div>
-
-        <section className="section-contact">
-            <SectionHeader 
-                align="center"
-                caption="Get In Touch"
-                title="Let's Build Something Amazing"
-                description="Ready to transform your business? Reach out to discuss your project and discover how we can help you achieve your technology goals."
-            />
-
-            <SplitSection className="contact-container">
-                {/* Left: Glassmorphism Form */}
-                <div className="contact-form-glass">
-                <form>
-                    <div className="form-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="John Doe" />
-                    </div>
-                    <div className="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="john@example.com" />
-                    </div>
-                    <div className="form-group">
-                    <label>Company</label>
-                    <input type="text" placeholder="Your Company" />
-                    </div>
-                    <div className="form-group">
-                    <label>Message</label>
-                    <textarea placeholder="Tell us about your project..."></textarea>
-                    </div>
-                </form>
                 </div>
+
+            </SplitSection>
+
+            <div className="section4">
+
+                <button className="section4-caption">Our Work</button>
+                        <header>
+                            <h1 className="section4-title">Featured Projects</h1>
+                        </header>
+
+                        <p className="section4-paragraph">
+                            Discover how we've helped businesses across various industries achieve their technology goals through innovative solutions and expert consulting.
+                        </p>
+
+                        <div className="section4-container">
+                            {PROJECTS.map((project) =>(
+                                <Card key = {project.id} variant= "project" tag= {project.tag} title = {project.title} description={project.description} imageUrl = {project.imageUrl}
+                                />                
+                            ))}
+                        </div>
+
+                        <p className="section4-paragraph">
+                            Want to see more of our work?
+                        </p>
+
+                        <button className="more-projects-button">View More Projects</button>
+            </div>
+
+            <div className="section5">
+                <button className="caption3">Get in Touch</button>
+                <header>
+                    <h1 className="section5-title">Let's Build Something Amazing Together</h1>
+                </header>
 
             <div className="section5">
                 <button className="caption3">Get in Touch</button>
@@ -253,7 +228,8 @@ const Homepage = () => {
                 {/* New wrapper ends here */}
             </div>
             
-            </>
+        
+        </>
     );
 }
 export default Homepage;
