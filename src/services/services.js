@@ -32,23 +32,20 @@ export const SERVICES_DATA = [
         title: "Data Analytics and Business Intelligence",
         description: "Data analytics and business intelligence services to help you make informed decisions and drive growth.",
         icon: <FaBrain />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/026/768/485/small/big-data-data-analytics-insights-and-trends-concept-with-character-data-driven-decisions-abstract-illustration-set-information-analysis-business-intelligence-metaphor-vector.jpg"
-    },
+        },
 
     {
         id: 5,
         title: "IT Consulting and Strategy",
         description: "Expert IT consulting and strategy services to help you align technology with your business goals.",
         icon: <FaHandshake />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/009/160/074/small/the-work-team-is-discussing-investment-business-analysis-free-vector.jpg"
-    },
+},
 
     {
         id: 6,
         title: "Digital Transformation Services",
         description: "Comprehensive digital transformation services to help you stay competitive in the digital age.",
         icon: <FaDigitalTachograph />,
-        imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/051/092/667/small/digital-transformation-illustration-concept-free-vector.jpg"
     }
 
 ];
