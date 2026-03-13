@@ -72,7 +72,7 @@ const Homepage = () => {
 
                 <div className="card-container2">
                     {SERVICES_DATA.map((service) =>(
-                        <Card key = {service.id} variant= "service" title = {service.title} description={service.description} imageUrl = {service.imageUrl} icon={service.icon}
+                        <Card key = {service.id} variant= "service" title = {service.title} description={service.description} icon={service.icon}
                         />                
                     ))}
                 </div>
@@ -91,7 +91,7 @@ const Homepage = () => {
                 <div className="right-content">
                     <div className="benefit-grid">
                         {BENEFITS.map((benefit, index)=>(
-                            <Card key={index} variant="benefit" title={benefit.title} description={benefit.description} />
+                            <Card key={index} variant="benefit" title={benefit.title} description={benefit.description} icon={benefit.icon} />
                         ))}
                     </div>
                 </div>

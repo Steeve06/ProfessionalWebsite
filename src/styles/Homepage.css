@@ -183,12 +183,19 @@
 .section2-title {
     background-color: #ebc6e6;
     border: solid #d89fd0;
-    font-size: 16px;
+    color: #8a077d;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    cursor: default;
     text-align: center;
+    font-size: 16px;
     border-radius: 20px;
     margin-top: 2rem;
     margin-bottom: 0%;
-    color: #8a077d;
     padding: 10px 20px;
     margin-left: 350px;
     margin-right: 350px;
@@ -301,16 +308,20 @@
 }
 
 .section3-caption {
-    background-color: #dee0e6;
+    background-color: #b7c5ed;
     border: solid #c8d1ed;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     border-radius: 20px;
     width: fit-content;
     color: royalblue;
     padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: default;
 }
+
 
 .section3 .section-header-title {
     font-size: clamp(2.5rem, 5vw, 4.3rem);
@@ -386,7 +397,7 @@
     background-color: #c1eaca;
     border: solid #c1eaca;
     font-size: 16px;
-    font-weight: 545;
+    font-weight: 600;
     text-align: center;
     border-radius: 20px;
     margin-top: -1rem;
@@ -394,6 +405,9 @@
     margin-top: 2rem;
     color: rgb(9, 167, 30);
     padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: default;
 }
 
 .section4-title {
@@ -413,36 +427,61 @@
 
 .card--project {
     background-color: white;
-    padding: 2rem;
+    padding: 0;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     min-height: 100px;
 }
 
+.card-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This is the "magic" that prevents stretching */
+    transition: transform 0.5s ease;
+}
+
+.card--project:hover .card-image {
+    transform: scale(1.1);
+    /* Subtle zoom effect on hover */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .card--project .card-tag {
-    background-color: #f0f4ff;
-    /* Very light blue */
-    color: #411bea;
-    /* Your brand blue */
+    background-color: #a9ecbb;
+    color: #000000;
     font-size: 12px;
     width: fit-content;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 4px;
+    padding:4px 12px;
     border-radius: 20px;
-    /* Makes it a pill shape */
     margin-bottom: 12px;
-    /* Gap between tag and title */
 }
 
 .card--project .card-title {
     font-size: 24px;
     font-weight: bold;
     align-items: center;
+    padding: 4px 0;
     margin-bottom: 0rem;
 }
 
@@ -481,17 +520,21 @@
 }
 
 .caption3 {
-    background-color: #6a1676;
-    border: solid #6a1676;
+    background-color: #7b5181;
+    border: solid #7b5181;
     font-size: 16px;
-    font-weight: 545;
+    font-weight: 600;
     text-align: center;
     border-radius: 20px;
     margin-top: -1rem;
     width: fit-content;
-    color: rgb(240, 235, 240);
+    color: rgb(93, 9, 93);
     padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: default;
 }
+
 
 .section5-title {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
