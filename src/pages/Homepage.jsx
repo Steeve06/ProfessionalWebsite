@@ -1,4 +1,6 @@
 import React from "react";
+import { ArrowRight } from 'lucide-react'
+import { FaEnvelope, FaPhone,FaLinkedin, FaUsers, FaRocket, FaHandshake, FaCheckCircle, FaCloud, FaShieldAlt, FaLightbulb, FaChartBar, FaSyncAlt, FaCode, FaLaptopCode } from 'react-icons/fa';
 import img from "../assets/img.png";
 import {SERVICES_DATA} from "../services/services";
 import { BENEFITS } from "../services/benefits";    
@@ -8,6 +10,7 @@ import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
 import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 import '../styles/Homepage.css';
+
 
 const Homepage = () => {
     return(
@@ -126,6 +129,12 @@ const Homepage = () => {
                     <h1 className="section5-title">Let's Build Something Amazing Together</h1>
                 </header>
 
+            <div className="section5">
+                <button className="caption3">Get in Touch</button>
+                <header>
+                    <h1 className="section5-title">Let's Build Something Amazing Together</h1>
+                </header>
+
                 <p className="section5-paragraph">
                     Whether you're ready to start a project or just want to learn more...
                 </p>
@@ -218,7 +227,6 @@ const Homepage = () => {
 
                 {/* New wrapper ends here */}
             </div>
-            
             
         
         </>
