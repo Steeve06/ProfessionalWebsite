@@ -1,38 +1,31 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom"; // Essential for SPAs
 import "../styles/Navbar.css";
-
-
 
 const Navbar = () => {
     return (
-        <nav className = "Navbar">
-
-            {/* Left side of the navbar */}
+        <nav className="Navbar" aria-label="Main Navigation">
             <div className="Navbar-left">
-                <a href="/" className="logo">
+                {/* Use Link for the logo to return home without a refresh */}
+                <Link title="MoctoTech Home" to="/" className="logo">
                     MoctoTech
-                </a>
+                </Link>
             </div>
 
             <div className="Navbar-right"> 
                 <ul className="Nav-links">
+                    <li><NavLink to="/" end>Home</NavLink></li>
+                    <li><NavLink to="/services">Services</NavLink></li>
+                    <li><NavLink to="/projects">Projects</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
                     <li>
-                        <a href="/Homepage">Home</a>
-                    </li>
-                    <li>
-                        <a href = "/AboutPage">About</a>
-                    </li>
-                    <li>
-                        <a href="/ServicesPage">Services</a>
-                    </li>
-                    <li>
-                        <a href="/ScheduleCall">Schedule Call</a>
+                        {/* Call to Action (CTA) button style */}
+                        <Link to="/schedule" className="nav-cta">
+                            Schedule Call
+                        </Link>
                     </li>
                 </ul>
             </div>
-
-           
-
         </nav>  
     );
 }
