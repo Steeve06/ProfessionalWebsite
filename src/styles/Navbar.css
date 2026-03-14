@@ -3,7 +3,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    min-height: 100px;
     color: white;
+    margin-bottom: 0;
     padding: 1rem;
 }
 
