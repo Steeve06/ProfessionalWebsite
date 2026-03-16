@@ -1,6 +1,7 @@
 import { OUR_SERVICES } from "../services/OurServices";
 import ServiceCard from "../components/ServiceCard";
 import '../styles/ServicesPage.css';
+import SectionHeaderCenter from "../components/SectionHeaderCenter";
 
 const ServicesPage = () => {
     // Early Return Pattern: Keeps the main JSX clean
@@ -9,16 +10,25 @@ const ServicesPage = () => {
     }
 
     return (
-        <section className="services-section" aria-labelledby="services-title">
-            <h2 id="services-title">Our IT Solutions</h2>
-            {OUR_SERVICES.map((service) => (
-                    <ServiceCard 
-                        key={service.id} 
-                        {...service} // Spread operator: passes all keys as props automatically
-                        isReversed={service.id % 2 !== 0}
-                    />
-                ))
-            }
+        <section className="services-section">
+            
+            {/* This component now handles the entire intro for the section */}
+            <SectionHeaderCenter
+                caption="Our Expertise"
+                title="Comprehensive IT Solutions"
+                subtitle="Tailored for Your Business Success"
+                description="Explore our wide range of IT services designed to drive innovation, enhance security, and optimize your operations."
+            />
+
+            {/* Map over services using 'index' for the zig-zag layout */}
+            {OUR_SERVICES.map((service, index) => (
+                <ServiceCard
+                    key={service.id}
+                    {...service} 
+                    isReversed={index % 2 !== 0} 
+                />
+            ))}
+            
         </section>
     );
 };

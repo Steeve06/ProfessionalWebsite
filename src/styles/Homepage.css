@@ -517,19 +517,22 @@
     margin-top: 10px;
     padding: 4rem 8%;
     overflow-x: hidden;
-    background: linear-gradient(130deg, #1f02a0dc, #6a1676);
+    background: linear-gradient(135deg,
+                #1e3a8a 0%,
+                #581c87 50%,
+                #831843 100%);
 }
 
 .caption3 {
-    background-color: #7b5181;
-    border: solid #7b5181;
+    background-color: transparent;
+    border: solid white;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
     border-radius: 20px;
     margin-top: -1rem;
     width: fit-content;
-    color: rgb(93, 9, 93);
+    color: white;
     padding: 8px 16px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
