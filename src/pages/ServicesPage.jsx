@@ -20,6 +20,7 @@ const ServicesPage = () => {
                     title="Comprehensive IT Solutions"
                     subtitle="Tailored for Your Business Success"
                     description="Explore our wide range of IT services designed to drive innovation, enhance security, and optimize your operations."
+                    showButton={true}
                 />
                 
             <section className="services-section">

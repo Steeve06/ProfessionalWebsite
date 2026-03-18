@@ -3,7 +3,7 @@ import styles from '../styles/SectionHeaderCenter.module.css';
 import { FaArrowRight } from 'react-icons/fa';
 
 
-const SectionHeaderCenter = ({ caption, title, subtitle, description }) => {
+const SectionHeaderCenter = ({ caption, title, subtitle, description, showButton }) => {
 
     const handleScroll = () => {
         // We look for the first service card on the page
@@ -34,7 +34,11 @@ const SectionHeaderCenter = ({ caption, title, subtitle, description }) => {
                 {description && <p className={styles['banner-description']}>{description}</p>}
                 
                 {/* 5. CTA Button */}
-                <button className={styles['banner-cta']} onClick={handleScroll}>Explore Our Services <FaArrowRight/> </button>
+                {showButton && (
+                    <button className={styles['banner-cta']} onClick={handleScroll}>
+                        Explore Our Services <FaArrowRight/>
+                    </button>
+                )}
             </div>
         </header>
     );

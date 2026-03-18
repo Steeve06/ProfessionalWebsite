@@ -8,7 +8,6 @@ import {SplitSection} from "../components/SplitSection";
 import { PROJECTS } from "../services/projects";
 import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
-import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 import '../styles/Homepage.css';
 
 
@@ -129,12 +128,6 @@ const Homepage = () => {
                     <h1 className="section5-title">Let's Build Something Amazing Together</h1>
                 </header>
 
-            <div className="section5">
-                <button className="caption3">Get in Touch</button>
-                <header>
-                    <h1 className="section5-title">Let's Build Something Amazing Together</h1>
-                </header>
-
                 <p className="section5-paragraph">
                     Whether you're ready to start a project or just want to learn more...
                 </p>
@@ -227,8 +220,6 @@ const Homepage = () => {
 
                 {/* New wrapper ends here */}
             </div>
-            
-        
         </>
     );
 }
