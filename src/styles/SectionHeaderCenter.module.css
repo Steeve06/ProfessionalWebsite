@@ -6,7 +6,7 @@
         #1e3a8a 0%,
         #581c87 50%,
         #831843 100%);
-    padding: 5rem 5rem;
+    padding: 4rem 2rem;
     display: flex;
     justify-content: center;
     color: white;
@@ -47,6 +47,8 @@
     font-size: clamp(2rem, 4.5vw, 3.8rem);
     font-weight: bold;
     line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0;
     background: #b6aaebdc;
     -webkit-background-clip: text;
     background-clip: text;
@@ -60,7 +62,7 @@
     line-height: 1.6;
     color: white;
     max-width: 900px;
-    margin-top: 1rem;
+    margin-top: 0;
 }
 
 /* SectionHeaderCenter.module.css */

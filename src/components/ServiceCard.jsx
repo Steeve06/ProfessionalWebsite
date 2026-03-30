@@ -1,5 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
 import styles from '../styles/ServiceCard.module.css';
+import { Link } from "react-router-dom";
 
 // ServiceCard.jsx
 const ServiceCard = ({ title, description, features, icon, imageUrl, color, isReversed }) => {
@@ -33,12 +34,18 @@ const ServiceCard = ({ title, description, features, icon, imageUrl, color, isRe
                 </ul>
 
                 {/* Dynamic Button Color */}
-                <button 
+                <Link 
+                    to="/schedule" 
                     className={styles['learn-more-btn']} 
-                    style={{ backgroundColor: color }}
+                    style={{ 
+                        backgroundColor: color,
+                        textDecoration: 'none',
+                        display: 'inline-block',
+                        textAlign: 'center'
+                    }}
                 >
                     Learn More →
-                </button>
+                </Link>
             </div>
         </div>
     );

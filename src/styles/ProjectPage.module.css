@@ -1,0 +1,19 @@
+.pageContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.projectsGrid {
+    display: grid;
+    /* This creates a responsive grid without needing media queries! */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+}

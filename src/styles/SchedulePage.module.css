@@ -1,0 +1,113 @@
+/* SchedulePage.module.css */
+
+.scheduleContainer {
+    background: radial-gradient(circle at top right,
+            rgba(238, 230, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 240, 245, 1) 100%);
+    padding: 4rem 2rem;
+    min-height: 80vh;
+}
+
+.grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.infoBox {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Consistent with AboutPage cards */
+}
+
+.infoBox h3 {
+    color: #0f172a;
+    /* Navy color from Footer */
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.expectationList {
+    list-style: none;
+    padding: 0;
+}
+
+.expectationList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: #64748b;
+    /* Grey text from AboutPage */
+    font-size: 1.1rem;
+}
+
+.expectationList svg {
+    color: #070ee6;
+    /* Primary blue from cta-button */
+}
+
+.form {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #070ee6;
+    /* Matches cta-button */
+    color: white;
+    border: none;
+    border-radius: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #050ab5;
+    transform: scale(1.02);
+    /* Subtle scale effect like Homepage buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
