@@ -1,0 +1,10 @@
+.services-section {
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: #e9dbdb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
