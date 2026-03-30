@@ -9,9 +9,11 @@ import { PROJECTS } from "../services/projects";
 import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
 import '../styles/Homepage.css';
-
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
+    const navigate = useNavigate();
     return(
         <>
         {/* first section of homepage consisting of left and right columns */}
@@ -25,8 +27,15 @@ const Homepage = () => {
                     <p className="section3-paragraph">MoctoTech helps businesses streamline operations, enhance productivity, and drive growth through innovative technology solutions.</p>
 
                     <div className="features">
-                        <button className="cta-button">Get Started <span className="arrow">→</span></button>
-                        <button className="our-services-button">Our Services</button>
+                        <Link to="/schedule" style={{ textDecoration: 'none' }}>
+                            <button className="cta-button">
+                                Get Started <span className="arrow">→</span>
+                            </button>
+                        </Link>
+                        
+                        <Link to="/services" style={{ textDecoration: 'none' }}>
+                            <button className="our-services-button">Our Services</button>
+                        </Link>
                         
                     </div>
 
@@ -119,7 +128,12 @@ const Homepage = () => {
                             Want to see more of our work?
                         </p>
 
-                        <button className="more-projects-button">View More Projects</button>
+                        <button 
+                            className="more-projects-button" 
+                            onClick={() => navigate('/projects')}
+                        >
+                            View More Projects
+                        </button>
             </div>
 
             <div className="section5">
