@@ -60,6 +60,13 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Change this to 2 or 4 depending on your preference */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 4.5em;
 }
 
 .tagList {
@@ -74,4 +81,97 @@
     background: #f9fafb;
     padding: 2px 8px;
     border-radius: 4px;
+}
+
+/* --- Existing Card Logic --- */
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Show only 3 lines on the card */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.readMoreBtn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* --- Modal Styles --- */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    /* Darken background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 15px;
+    overflow-y: auto;
+    /* Scroll if description is massive */
+    position: relative;
+    animation: modalPop 0.3s ease-out;
+}
+
+.fullMedia {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.modalInfo {
+    padding: 30px;
+}
+
+.fullDescription {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+    /* Respects line breaks from Django Admin */
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modalPop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
