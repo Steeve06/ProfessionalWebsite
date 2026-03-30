@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+972aa#a@_^=(%40sg7-%g%_+8pgixwusv5!*#)%9qhp_n10&u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://moctotech-backend.onrender.com', 'localhost']
 
 
 # Application definition
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "https://moctotech-frontend.vercel.app/",
 ]
 
 ROOT_URLCONF = 'core.urls'
