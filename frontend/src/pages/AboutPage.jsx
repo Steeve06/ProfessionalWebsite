@@ -34,7 +34,7 @@ const AboutPage = () => {
                         {/* 2. Left Column: Title and Text */}
                         <div className={styles.leftColumn}>
                             <h3 className={styles.mainTitle1}>
-                                Hi, I'm an IT Consultant Who Actually Cares About Your Success.
+                                Hi, I'm a Software Engineer and Technology Consultant Who Actually Cares About Your Success.
                             </h3>
                             <p className={styles.description}>
                                 I am a software engineer and technology consultant with over 2.5 years of experience helping businesses use technology to solve real problems, 
