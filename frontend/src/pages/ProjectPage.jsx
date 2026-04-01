@@ -1,9 +1,10 @@
+import BASE_URL from '../api/config';
 import React, { useState, useEffect } from 'react'; // Added Hooks
 import SectionHeaderCenter from '../components/SectionHeaderCenter';
 import ProjectCard from '../components/ProjectCard'; 
 import Footer from '../components/Footer';
 import styles from '../styles/ProjectPage.module.css';
-import BASE_URL from '../api/config';
+
 
 const ProjectPage = () => {
     // 1. Create state to hold our dynamic projects
