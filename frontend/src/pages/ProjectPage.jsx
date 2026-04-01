@@ -3,6 +3,7 @@ import SectionHeaderCenter from '../components/SectionHeaderCenter';
 import ProjectCard from '../components/ProjectCard'; 
 import Footer from '../components/Footer';
 import styles from '../styles/ProjectPage.module.css';
+import BASE_URL from '../api/config';
 
 const ProjectPage = () => {
     // 1. Create state to hold our dynamic projects
@@ -11,7 +12,7 @@ const ProjectPage = () => {
 
     // 2. Fetch data from Django when the component mounts
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/projects/')
+        fetch(`${BASE_URL}/api/projects/`)
             .then(response => response.json())
             .then(data => {
                 setProjects(data);
@@ -57,7 +58,7 @@ const ProjectPage = () => {
                             description={project.description}
                             // Note: If Django returns a relative path like /media/..., 
                             // you might need 'http://127.0.0.1:8000' + project.image
-                            imageUrl={project.image} 
+                            imageUrl={project.image.startsWith('http') ? project.image : `${BASE_URL}${project.image}`}
                             tags={project.tech_tags ? project.tech_tags.split(',') : []} 
                         />
                     ))}
