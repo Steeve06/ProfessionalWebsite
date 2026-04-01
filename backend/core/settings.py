@@ -59,6 +59,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://moctotech-frontend.vercel.app",
+    "https://moctotech-frontend-9bxv1re8u-steeve06s-projects.vercel.app",
 ]
 
 ROOT_URLCONF = 'core.urls'
