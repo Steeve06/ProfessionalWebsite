@@ -1,4 +1,5 @@
 import BASE_URL from '../api/config';
+import { API_ENDPOINTS } from '../api/config';
 import React, { useState, useEffect } from 'react'; // Added Hooks
 import SectionHeaderCenter from '../components/SectionHeaderCenter';
 import ProjectCard from '../components/ProjectCard'; 
@@ -13,7 +14,7 @@ const ProjectPage = () => {
 
     // 2. Fetch data from Django when the component mounts
     useEffect(() => {
-        fetch(`${BASE_URL}/api/projects/`)
+        fetch(API_ENDPOINTS.PROJECTS)
             .then(response => response.json())
             .then(data => {
                 setProjects(data);
