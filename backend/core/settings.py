@@ -39,10 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'cloudinary_storage',
+    'cloudinary',
 
     # Your Apps
     'api',  #
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'your_name',
+    'API_KEY': 'your_key',
+    'API_SECRET': 'your_secret'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

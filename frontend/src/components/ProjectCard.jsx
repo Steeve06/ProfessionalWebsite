@@ -18,10 +18,10 @@ const ProjectCard = ({ title, category, description, videoUrl, imageUrl, tags })
             />
           ) : (
             <img 
-              src={imageUrl || '/placeholder-project.jpg'} 
-              alt={title} 
-              className={styles.media} 
-            />
+                    src={imageUrl} 
+                    alt={title} 
+                    className={styles.projectImage} 
+                />
           )}
           <div className={styles.categoryBadge}>{category}</div>
         </div>
