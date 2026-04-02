@@ -69,7 +69,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://moctotech-frontend-9cm5ajqm2-steeve06s-projects.vercel.app",
+    "https://moctotech-frontend-3itflhce8-steeve06s-projects.vercel.app",
     "https://moctotech-frontend.vercel.app", # Add your main Vercel domain too
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://moctotech-frontend-.*\.vercel\.app$",
 ]
 
 # Ensure these are also set correctly
