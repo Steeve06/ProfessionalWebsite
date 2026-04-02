@@ -143,7 +143,10 @@ USE_TZ = True
 
 # This uses the BASE_DIR we defined at the top of the file
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 
 MEDIA_URL = '/media/'
 # Cloudinary will ignore this, but Django needs it defined
