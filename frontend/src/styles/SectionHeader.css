@@ -37,3 +37,21 @@
     margin-bottom: 1.5rem 0;
     max-width: 500px;
 }
+
+@media (max-width: 768px) {
+    .section-header {
+        padding: 0 1rem;
+        text-align: center;
+        /* Center headers on mobile for better balance */
+    }
+
+    .section-header--left {
+        text-align: center;
+        /* Override left alignment on mobile */
+    }
+
+    .section-header-description {
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+}

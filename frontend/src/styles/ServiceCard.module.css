@@ -121,3 +121,27 @@
 .learn-more-btn {
   margin-top: 0;
 }
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column !important;
+    /* Stack vertically */
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .card-visual,
+  .card-details {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    /* Smaller titles for mobile screens */
+  }
+
+  .reversed {
+    flex-direction: column !important;
+    /* Overrides the row-reverse on mobile */
+  }
+}

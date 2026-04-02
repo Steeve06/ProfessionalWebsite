@@ -684,16 +684,51 @@
 }
 
 /* Mobile Responsive: Stacks them back on top of each other */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .left-content1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .cta-button,
+    .our-services-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stats Grid */
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Benefits Grid */
+    .benefit-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Contact Section */
     .contact-container {
         flex-direction: column;
-        align-items: center;
+        padding: 2rem 1rem;
     }
 
     .contact-form,
-    .contact-info {
+    .contact-info-container {
         width: 100%;
-        text-align: center;
     }
 }
 

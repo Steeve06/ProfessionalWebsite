@@ -67,13 +67,15 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     .bottomRow {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
 
     .legalLinks {
         justify-content: center;
+        flex-wrap: wrap;
     }
 }

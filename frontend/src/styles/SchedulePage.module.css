@@ -106,8 +106,13 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 968px) {
+@media (max-width: 992px) {
     .grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .form {
+        padding: 1.5rem;
     }
 }

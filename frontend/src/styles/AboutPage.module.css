@@ -195,38 +195,39 @@
 
 /* Mobile: Switch to a standard single column */
 @media (max-width: 768px) {
-    .centralLine {
-        left: 30px;
+    .mainContent {
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    .timelineItem,
-    .timelineItem.right {
-        padding-left: 70px;
-        padding-right: 0;
-        justify-content: flex-start;
+    .leftColumn,
+    .rightColumn {
+        width: 100%;
+    }
+
+    /* Timeline Adjustments */
+    .centralLine {
+        left: 30px;
+        /* Move line from center to left */
+    }
+
+    .timelineItem {
+        width: 100% !important;
+        padding-left: 70px !important;
+        /* Space for the node on the left */
+        padding-right: 0 !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    .left .card,
+    .right .card {
+        margin: 0 !important;
+        width: 100%;
     }
 
     .node {
-        left: 30px;
-    }
-
-    .left .card {
-        text-align: left;
-        margin-right: 0;
-    }
-
-    .right .card {
-        margin-left: 0;
-    }
-}
-
-/* Tablet/Mobile logic */
-@media (max-width: 968px) {
-    .mainContent {
-        flex-direction: column;
-    }
-
-    .mainTitle {
-        font-size: 2rem;
+        left: 30px !important;
+        transform: translateX(-50%);
     }
 }

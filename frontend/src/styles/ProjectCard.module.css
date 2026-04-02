@@ -175,3 +175,20 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+    .modalContent {
+        width: 95%;
+        margin: 10px;
+        max-height: 85vh;
+    }
+
+    .modalInfo {
+        padding: 20px;
+    }
+
+    .fullMedia {
+        max-height: 250px;
+        /* Reduce height of modal image/video */
+    }
+}

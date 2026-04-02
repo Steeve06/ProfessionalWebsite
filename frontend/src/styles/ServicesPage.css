@@ -8,3 +8,10 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .services-section {
+    padding: 4rem 1rem;
+    height: auto;
+    /* Allow the page to grow with content */
+  }
+}
