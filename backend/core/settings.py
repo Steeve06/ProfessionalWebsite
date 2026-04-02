@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+972aa#a@_^=(%40sg7-%g%_+8pgixwusv5!*#)%9qhp_n10&u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['moctotech-backend.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['moctotech-backend.onrender.com', 'localhost', '127.0.0.1', '.onrender.com']
 
 
 # Application definition
@@ -137,20 +137,17 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 
-
+# This uses the BASE_DIR we defined at the top of the file
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# Media files (Images)
-# Note: Cloudinary will handle the storage, but Django still needs these defined
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
+# Cloudinary will ignore this, but Django needs it defined
+MEDIA_ROOT = BASE_DIR / "media" 
 
-# WhiteNoise Storage configuration
+# Correct Storage configuration for Django 4.2+ 
 STORAGES = {
     "default": {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
