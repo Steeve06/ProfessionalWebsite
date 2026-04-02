@@ -40,6 +40,7 @@ const ProjectPage = () => {
         );
     }
 
+    
     return (
         <>
             <SectionHeaderCenter
@@ -52,18 +53,23 @@ const ProjectPage = () => {
 
             <div className={styles.pageContainer}>
                 <section className={styles.projectsGrid}>
-                    {projects.map((project) => (
-                        <ProjectCard 
-                            key={project.id}
-                            title={project.title}
-                            category={project.tag}
-                            description={project.description}
-                            // Note: If Django returns a relative path like /media/..., 
-                            // you might need 'http://127.0.0.1:8000' + project.image
-                            imageUrl={`${BASE_URL}${project.image}`}
-                            tags={project.tech_tags ? project.tech_tags.split(',') : []} 
-                        />
-                    ))}
+                    {projects.map((project) => {
+                        
+                        const imageSource = project.image.startsWith('http') 
+                            ? project.image 
+                            : `${BASE_URL}${project.image}`;
+
+                        return (
+                            <ProjectCard 
+                                key={project.id}
+                                title={project.title}
+                                category={project.tag}
+                                description={project.description}
+                                imageUrl={imageSource} // Using the defined variable
+                                tags={project.tech_tags ? project.tech_tags.split(',') : []} 
+                            />
+                        );
+                    })}
                 </section>
             </div>
 
