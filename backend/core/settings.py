@@ -158,6 +158,7 @@ STORAGES = {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
     },
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        # Change 'CompressedManifestStaticFilesStorage' to 'CompressedStaticFilesStorage'
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
