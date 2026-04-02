@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api/config';
 import React, { useState } from 'react';
 import SectionHeaderCenter from '../components/SectionHeaderCenter';
 import Footer from '../components/Footer';
@@ -21,7 +22,7 @@ const SchedulePage = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/consultations/', {
+            const response = await fetch(API_ENDPOINTS.CONSULTATION, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
