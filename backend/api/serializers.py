@@ -8,7 +8,6 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ConsultationSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField(use_url=True)
     class Meta:
         model = Consultation
         fields = '__all__'
