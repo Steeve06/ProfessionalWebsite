@@ -1,57 +1,76 @@
+/* SectionHeader.css */
 
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
 
+.section-header--left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.section-header--center {
+    align-items: center;
+    text-align: center;
+}
+
+.section-header--right {
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* Caption pill — rendered as <span> in JSX */
 .section-header .caption {
     display: inline-block;
-    background-color: #e0e7ff;
+    background-color: rgba(99, 102, 241, 0.1);
     color: #4338ca;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 16px;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    /* Remove default button appearance if element is still a button */
     border: none;
     cursor: default;
 }
 
 .section-header-title {
-    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-size: clamp(1.6rem, 4vw, 3.2rem);
+    font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 1rem;
-    color: #080808;
+    color: var(--color-navy);
+    margin: 0;
 }
 
 .section-header-subtitle {
-    font-size: clamp(2rem, 4.5vw, 3.8rem);
-    font-weight: bold;
+    font-size: clamp(1.4rem, 3.8vw, 2.8rem);
+    font-weight: 800;
     line-height: 1.1;
-    background: linear-gradient(90deg, #411beadc, #e607c5);
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .section-header-description {
-    font-size: clamp(1rem, 1.2vw, 1.25rem);
-    color: #333;
-    margin-bottom: 1.5rem 0;
-    max-width: 500px;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
-    .section-header {
-        padding: 0 1rem;
-        text-align: center;
-        /* Center headers on mobile for better balance */
-    }
-
     .section-header--left {
+        align-items: center;
         text-align: center;
-        /* Override left alignment on mobile */
     }
 
     .section-header-description {
-        margin: 1rem auto;
         max-width: 100%;
     }
 }

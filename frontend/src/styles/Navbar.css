@@ -1,64 +1,102 @@
-.Navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    min-height: 100px;
-    color: white;
-    margin-bottom: 0;
-    padding: 1rem;
+/* =============================================================
+   index.css  —  Design tokens, reset, global base styles
+   Loaded first via main.jsx so :root variables are available
+   to every stylesheet in the app.
+   ============================================================= */
+
+/* ---- Design Tokens ---- */
+:root {
+    /* Palette */
+    --color-navy: #0D1B2A;
+    --color-charcoal: #1B2A3B;
+    --color-white: #FFFFFF;
+    --color-off-white: #F5F7FA;
+    --color-surface: #FFFFFF;
+    --color-border: #E2E8F0;
+
+    /* Accent */
+    --color-accent: #007BFF;
+    --color-accent-dk: #0056CC;
+
+    /* Brand gradient */
+    --gradient-brand: linear-gradient(90deg, #411beadc, #e607c5);
+
+    /* Text */
+    --color-text-primary: #0D1B2A;
+    --color-text-secondary: #64748B;
+    --color-text-muted: #94A3B8;
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-pill: 50px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --transition: 0.25s ease;
 }
 
-.Navbar-left .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #411beadc, #e607c5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
+/* ---- Reset (consolidates App.css + index.css) ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.Navbar-right .Nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+html,
+body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-.Navbar-right .Nav-links li  {
-    margin-right: 1rem;
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-off-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.Navbar-right .Nav-links li a {
-    color: rgb(18, 17, 17);
-    text-decoration: none;
-    font-size: 1rem;    
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-@media (max-width: 768px) {
-    .Navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 1.5rem 1rem;
-    }
+a {
+    color: inherit;
+}
 
-    .Navbar-right .Nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 15px;
-        margin-top: 20px;
-    }
+button {
+    font-family: inherit;
+}
 
-    .Navbar-right .Nav-links li {
-        margin: 0;
-    }
+/* ---- Global utility classes ---- */
+.page-wrapper {
+    width: 100%;
+}
 
-    .nav-cta {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-    }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

@@ -1,11 +1,8 @@
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from 'react-icons/fa';
 import styles from '../styles/ServiceCard.module.css';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-// ServiceCard.jsx
 const ServiceCard = ({ title, description, features, icon, imageUrl, color, isReversed }) => {
-    
-    // Create a class string that includes 'reversed' if isReversed is true
     const cardClasses = `${styles['card-wrapper']} ${isReversed ? styles['reversed'] : ''}`;
 
     return (
@@ -15,34 +12,34 @@ const ServiceCard = ({ title, description, features, icon, imageUrl, color, isRe
             </div>
 
             <div className={styles['card-details']}>
-                {/* Dynamic Icon Color */}
-                <div className={styles['card-icon-box']} style={{ backgroundColor: color }}>
+                <div
+                    className={styles['card-icon-box']}
+                    style={{ backgroundColor: color }}
+                >
                     {icon}
                 </div>
-                
+
                 <h2 className={styles['card-title']}>{title}</h2>
-                <p>{description}</p>
-                
+                <p className={styles['card-description']}>{description}</p>
+
                 <ul className={styles['card-features-list']}>
                     {features?.map((item, i) => (
                         <li key={i} className={styles['feature-item']}>
-                            {/* Dynamic Check Icon Color */}
-                            <FaCheckCircle style={{ color: color }} />
+                            <FaCheckCircle style={{ color, flexShrink: 0 }} />
                             <span>{item}</span>
                         </li>
                     ))}
                 </ul>
 
-                {/* Dynamic Button Color */}
-                <Link 
-                    to="/schedule" 
-                    className={styles['learn-more-btn']} 
-                    style={{ 
-                        backgroundColor: color,
-                        textDecoration: 'none',
-                        display: 'inline-block',
-                        textAlign: 'center'
-                    }}
+                {/*
+                  Button color comes from the CSS module (.learn-more-btn uses the
+                  per-card `color` prop via inline style only on backgroundColor —
+                  all other sizing/padding/radius is owned by the module.
+                */}
+                <Link
+                    to="/schedule"
+                    className={styles['learn-more-btn']}
+                    style={{ backgroundColor: color }}
                 >
                     Learn More →
                 </Link>

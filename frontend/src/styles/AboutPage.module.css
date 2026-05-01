@@ -1,8 +1,15 @@
+/* AboutPage.module.css */
+
+/* ============================================================
+   BIOGRAPHY SECTION
+   ============================================================ */
 .biography {
-    background: radial-gradient(circle at top right, rgba(238, 230, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 240, 245, 1) 100%);
+    background: radial-gradient(circle at top right,
+            rgba(238, 230, 255, 0.6) 0%,
+            var(--color-white) 50%,
+            rgba(255, 240, 245, 0.5) 100%);
     width: 100%;
     padding: 5rem 0;
-    margin-bottom: 0;
 }
 
 .container {
@@ -11,73 +18,69 @@
     padding: 0 2rem;
 }
 
-/* The "Biography" label at the top */
 .header1 {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.75rem;
     margin-bottom: 2rem;
-    /* Space before the main title/image row */
 }
 
 .iconBox1 {
-    font-size: 1.5rem;
-    color: #007bff;
+    font-size: 1.4rem;
+    color: var(--color-accent);
     display: flex;
 }
 
 .sectionLabel1 {
-    font-size: 1.2rem;
+    font-size: 0.78rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #245dac;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
     margin: 0;
 }
 
-/* The row containing text and image */
 .mainContent {
     display: flex;
     gap: 4rem;
     align-items: flex-start;
-    /* CRITICAL: Levels the title with the picture */
 }
 
 .leftColumn {
     flex: 1.2;
-    /* Gives slightly more room to the text */
-}
-
-.mainTitle1 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #0f172a;
-    margin: 0 0 1.5rem 0;
-    /* No top margin so it aligns with image */
-}
-
-.description {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    color: #475569;
 }
 
 .rightColumn {
     flex: 1;
 }
 
+.mainTitle1 {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--color-navy);
+    margin: 0 0 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
 .image {
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
+/* ============================================================
+   TIMELINE SECTION
+   ============================================================ */
 .timelineSection {
-    padding: 2rem 2rem;
-    background-color: #F8FAFC;
-    min-height: 100vh;
-    margin-top: 0;
+    padding: 5rem 2rem;
+    background-color: var(--color-off-white);
 }
 
 .header {
@@ -85,24 +88,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .mainTitle {
-    font-size: 2.5rem;
-    color: #2563eb;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--color-accent);
     font-weight: 800;
-    text-align: center;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #64748b;
-    max-width: 600px;
-    line-height: 1.6;
-    margin-top: 0%;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+    margin: 0.5rem 0 0;
 }
 
+/* ---- Timeline layout ---- */
 .timelineContainer {
     position: relative;
     max-width: 1000px;
@@ -110,7 +114,6 @@
     padding: 2rem 0;
 }
 
-/* The Central Axis */
 .centralLine {
     position: absolute;
     left: 50%;
@@ -124,7 +127,6 @@
 .timelineItem {
     display: flex;
     justify-content: flex-end;
-    /* Default for left side */
     padding-right: 50%;
     position: relative;
     margin-bottom: 4rem;
@@ -137,21 +139,26 @@
     padding-left: 50%;
 }
 
-/* The Cards */
+/* ---- Cards ---- */
 .card {
     width: 85%;
-    /* Don't touch the center line */
-    background: white;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
     position: relative;
     text-align: left;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
 .left .card {
     margin-right: 40px;
-    text-align: left;
 }
 
 .right .card {
@@ -159,41 +166,48 @@
 }
 
 .year {
+    font-size: 0.8rem;
     font-weight: 700;
-    color: #3b82f6;
-    font-size: 0.9rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.4rem 0 0.5rem;
+    color: var(--color-navy);
 }
 
 .cardText {
-    color: #64748b;
-    line-height: 1.6;
+    font-size: 0.93rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
 }
 
-/* The Nodes (Icons on the line) */
+/* ---- Node icons on the line ---- */
 .node {
     position: absolute;
     left: 50%;
     top: 20px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+    font-size: 1.1rem;
+    box-shadow: 0 0 0 4px var(--color-off-white), var(--shadow-md);
     z-index: 2;
 }
 
-/* Mobile: Switch to a standard single column */
+/* ============================================================
+   RESPONSIVE ≤ 768px
+   ============================================================ */
 @media (max-width: 768px) {
     .mainContent {
         flex-direction: column;
@@ -203,20 +217,19 @@
     .leftColumn,
     .rightColumn {
         width: 100%;
+        flex: unset;
     }
 
-    /* Timeline Adjustments */
+    /* Move timeline line to the left */
     .centralLine {
-        left: 30px;
-        /* Move line from center to left */
+        left: 24px;
     }
 
-    .timelineItem {
-        width: 100% !important;
-        padding-left: 70px !important;
-        /* Space for the node on the left */
+    .timelineItem,
+    .timelineItem.right {
+        width: 100%;
+        padding-left: 64px !important;
         padding-right: 0 !important;
-        text-align: left !important;
         justify-content: flex-start !important;
     }
 
@@ -227,7 +240,6 @@
     }
 
     .node {
-        left: 30px !important;
-        transform: translateX(-50%);
+        left: 24px !important;
     }
 }

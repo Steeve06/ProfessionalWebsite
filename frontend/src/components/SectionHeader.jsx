@@ -1,16 +1,15 @@
-
 import React from 'react';
 import '../styles/SectionHeader.css';
 
-const SectionHeader = ({ caption, title, subtitle, description, align = "left" }) => {
+const SectionHeader = ({ caption, title, subtitle, description, align = 'left' }) => {
     return (
-        // We use a dynamic class for alignment (left, center, or right)
         <div className={`section-header section-header--${align}`}>
-            {caption && <button className="caption">{caption}</button>}
-            
+            {/* span: purely decorative label, not an interactive control */}
+            {caption && <span className="caption">{caption}</span>}
+
             <header>
                 <h1 className="section-header-title">
-                    {title} 
+                    {title}
                     {subtitle && <span className="section-header-subtitle"> {subtitle}</span>}
                 </h1>
             </header>

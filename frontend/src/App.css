@@ -1,22 +1,11 @@
+/* =============================================================
+   App.css  —  App shell layout only.
+   Reset and design tokens live in index.css.
+   ============================================================= */
+
 .App {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-/* Ensure the viewport is respected */
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-* {
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-off-white);
 }

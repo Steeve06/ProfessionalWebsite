@@ -1,0 +1,23 @@
+/* SplitSection.css
+   Provides the two-column flex layout for SplitSection.jsx.
+   Individual pages override column widths via their own CSS.
+*/
+
+.split-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.split-section.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+
+    .split-section,
+    .split-section.reverse {
+        flex-direction: column;
+    }
+}

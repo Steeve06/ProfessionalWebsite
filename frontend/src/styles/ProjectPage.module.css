@@ -1,3 +1,5 @@
+/* ProjectPage.module.css */
+
 .pageContainer {
     max-width: 1200px;
     margin: 0 auto;
@@ -6,18 +8,34 @@
 
 .projectsGrid {
     display: grid;
-    /* This creates a responsive grid without needing media queries! */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Empty / loading state */
+.emptyState {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 2rem;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .projectsGrid {
         grid-template-columns: 1fr;
-        /* Single column */
-        gap: 1.5rem;
-        padding: 1rem;
+        gap: 1.25rem;
     }
 
     .pageContainer {

@@ -1,17 +1,15 @@
+/* ServicesPage.css */
+
 .services-section {
-  padding: 2rem 2rem 1rem 2rem;
-  background-color: #e9dbdb;
-  min-height: 100vh;
+  padding: 3rem 2rem;
+  background-color: var(--color-off-white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 4rem 1rem;
-    height: auto;
-    /* Allow the page to grow with content */
+    padding: 2rem 1.25rem;
   }
 }

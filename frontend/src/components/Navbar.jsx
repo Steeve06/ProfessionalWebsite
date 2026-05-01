@@ -1,33 +1,63 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom"; // Essential for SPAs
-import "../styles/Navbar.css";
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const close = () => setIsOpen(false);
+
     return (
         <nav className="Navbar" aria-label="Main Navigation">
             <div className="Navbar-left">
-                {/* Use Link for the logo to return home without a refresh */}
-                <Link title="MoctoTech Home" to="/" className="logo">
+                <Link to="/" className="logo" onClick={close}>
                     MoctoTech
                 </Link>
             </div>
 
-            <div className="Navbar-right"> 
+            {/* Hamburger — CSS hides this on desktop */}
+            <button
+                className={`hamburger${isOpen ? ' open' : ''}`}
+                onClick={() => setIsOpen(prev => !prev)}
+                aria-label="Toggle navigation"
+                aria-expanded={isOpen}
+            >
+                <span />
+                <span />
+                <span />
+            </button>
+
+            {/* Nav drawer — CSS collapses this on mobile unless .mobile-open */}
+            <div className={`Navbar-right${isOpen ? ' mobile-open' : ''}`}>
                 <ul className="Nav-links">
-                    <li><NavLink to="/" end>Home</NavLink></li>
-                    <li><NavLink to="/services">Services</NavLink></li>
-                    <li><NavLink to="/projects">Projects</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
                     <li>
-                        {/* Call to Action (CTA) button style */}
-                        <Link to="/schedule" className="nav-cta">
-                            Schedule Call
+                        <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>
+                            Services
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>
+                            Projects
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={close}>
+                            About
+                        </NavLink>
+                    </li>
+                    <li className="nav-cta">
+                        <Link to="/schedule" onClick={close}>
+                            Book a Call
                         </Link>
                     </li>
                 </ul>
             </div>
-        </nav>  
+        </nav>
     );
-}
+};
 
 export default Navbar;
