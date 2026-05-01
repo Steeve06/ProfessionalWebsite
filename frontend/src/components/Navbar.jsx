@@ -8,13 +8,15 @@ const Navbar = () => {
 
     return (
         <nav className="Navbar" aria-label="Main Navigation">
+
+            {/* Logo — always visible */}
             <div className="Navbar-left">
                 <Link to="/" className="logo" onClick={close}>
                     MoctoTech
                 </Link>
             </div>
 
-            {/* Hamburger — CSS hides this on desktop */}
+            {/* Hamburger — CSS keeps this display:none on desktop */}
             <button
                 className={`hamburger${isOpen ? ' open' : ''}`}
                 onClick={() => setIsOpen(prev => !prev)}
@@ -26,7 +28,10 @@ const Navbar = () => {
                 <span />
             </button>
 
-            {/* Nav drawer — CSS collapses this on mobile unless .mobile-open */}
+            {/*
+              Desktop: .Navbar-right is display:flex, max-height:none — always visible.
+              Mobile:  .Navbar-right collapses to max-height:0, expands via .mobile-open.
+            */}
             <div className={`Navbar-right${isOpen ? ' mobile-open' : ''}`}>
                 <ul className="Nav-links">
                     <li>
@@ -56,6 +61,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+
         </nav>
     );
 };
