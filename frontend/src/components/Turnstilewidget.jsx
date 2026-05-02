@@ -1,14 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-/**
- * TurnstileWidget
- *
- * Props:
- *   siteKey  — your Cloudflare Turnstile site key (public)
- *   onVerify — callback(token: string) called when the challenge passes
- *   onExpire — optional callback when the token expires (user must re-verify)
- *   theme    — 'light' | 'dark' | 'auto'  (default: 'light')
- */
+
 const TurnstileWidget = ({ siteKey, onVerify, onExpire, theme = 'light' }) => {
     const containerRef = useRef(null);
     const widgetIdRef  = useRef(null);
@@ -50,7 +42,7 @@ const TurnstileWidget = ({ siteKey, onVerify, onExpire, theme = 'light' }) => {
         }
 
         return () => {
-            // Clean up the widget when the component unmounts
+            // Clean up the widget when the component unmount
             if (widgetIdRef.current !== null && window.turnstile) {
                 window.turnstile.remove(widgetIdRef.current);
                 widgetIdRef.current = null;
