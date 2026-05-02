@@ -28,7 +28,7 @@ const ProjectPage = () => {
 
     // Guard clause for Loading state
     if (loading) {
-        return <div className={styles.emptyState}><p>Loading projects, please do not give me up on me this page takes time to load because of the hosting site.</p></div>;
+        return <div className={styles.emptyState}><p>Loading projects, this page usually takes a few seconds to load.</p></div>;
     }
 
     // Guard clause for Empty state
