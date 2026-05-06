@@ -6,6 +6,7 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ProjectPage from './pages/ProjectPage';
 import SchedulePage from './pages/SchedulePage';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects" element={<ProjectPage />}  />
           <Route path="/schedule" element={<SchedulePage />} />
         </Routes>
+        <Analytics />
       </div>
     </Router>
   );
